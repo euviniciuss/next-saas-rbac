@@ -1,0 +1,16 @@
+{
+  "name": "@saas/api",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@saas/auth": "workspace:*"
+  },
+  "devDependencies": {
+    "@sass/biome-config": "workspace:*",
+    "@sass/tsconfig": "workspace:*",
+    "@types/node": "^25.7.0",
+    "tsx": "^4.21.0"
+  }
+}
