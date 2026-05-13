@@ -20,7 +20,20 @@ importers:
         specifier: ^1.9.4
         version: 1.9.4
 
-  config/typescript-config: {}
+  config/typescript-config:
+    devDependencies:
+      '@sass/biome-config':
+        specifier: workspace:*
+        version: link:../biome-config
+
+  packages/auth:
+    devDependencies:
+      '@sass/biome-config':
+        specifier: workspace:*
+        version: link:../../config/biome-config
+      '@sass/tsconfig':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
 
 packages:
 
