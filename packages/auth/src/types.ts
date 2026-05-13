@@ -1,12 +1,7 @@
-import type { ForcedSubject, MongoAbility } from "@casl/ability"
-import type { actions, subjects } from "./constants"
+import type { MongoAbility } from "@casl/ability"
 
-type AppAbilities = [
-  (typeof actions)[number],
-  (
-    | (typeof subjects)[number]
-    | ForcedSubject<Exclude<(typeof subjects)[number], "all">>
-  ),
-]
+import type { TProjectSubject, TUserSubject } from "./subjects"
+
+type AppAbilities = TUserSubject | TProjectSubject | ["manage", "all"]
 
 export type AppAbility = MongoAbility<AppAbilities>
