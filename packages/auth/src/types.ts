@@ -1,7 +1,8 @@
 import type { MongoAbility } from "@casl/ability"
 
-import type { TProjectSubject, TUserSubject } from "./subjects"
+import type { z } from "zod"
+import type { appAbilitiesSchema } from "./schema"
 
-type AppAbilities = TUserSubject | TProjectSubject | ["manage", "all"]
+export type AppAbilities = z.infer<typeof appAbilitiesSchema>
 
 export type AppAbility = MongoAbility<AppAbilities>
