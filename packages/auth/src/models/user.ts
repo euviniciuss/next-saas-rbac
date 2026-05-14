@@ -1,5 +1,8 @@
-import type { TRole } from "../permissions/types"
+import { z } from "zod"
+import { roleSchema } from "../roles"
 
-export type User = {
-  role: TRole
-}
+export const userSchema = z.object({
+  role: roleSchema,
+})
+
+export type User = z.infer<typeof userSchema>
