@@ -8,6 +8,10 @@ import type { User } from "./models/user"
 import { permissions } from "./permissions"
 import type { AppAbility } from "./types"
 
+export * from "./models/projects"
+export * from "./models/organization"
+export * from "./models/user"
+
 export const createAppAbility = createMongoAbility as CreateAbility<AppAbility>
 
 export function defineAbilityFor(user: User) {
