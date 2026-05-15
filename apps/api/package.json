@@ -15,7 +15,12 @@
     "pg": "^8.20.0",
     "zod": "^4.4.3"
   },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "@prisma/dev": "^0.24.7",
     "@sass/biome-config": "workspace:*",
     "@sass/tsconfig": "workspace:*",
     "@types/bcryptjs": "^3.0.0",

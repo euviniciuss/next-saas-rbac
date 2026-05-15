@@ -33,7 +33,7 @@ export type ProjectMinAggregateOutputType = {
   createdAt: Date | null
   updatedAt: Date | null
   organizationId: string | null
-  userId: string | null
+  ownerId: string | null
 }
 
 export type ProjectMaxAggregateOutputType = {
@@ -45,7 +45,7 @@ export type ProjectMaxAggregateOutputType = {
   createdAt: Date | null
   updatedAt: Date | null
   organizationId: string | null
-  userId: string | null
+  ownerId: string | null
 }
 
 export type ProjectCountAggregateOutputType = {
@@ -57,7 +57,7 @@ export type ProjectCountAggregateOutputType = {
   createdAt: number
   updatedAt: number
   organizationId: number
-  userId: number
+  ownerId: number
   _all: number
 }
 
@@ -71,7 +71,7 @@ export type ProjectMinAggregateInputType = {
   createdAt?: true
   updatedAt?: true
   organizationId?: true
-  userId?: true
+  ownerId?: true
 }
 
 export type ProjectMaxAggregateInputType = {
@@ -83,7 +83,7 @@ export type ProjectMaxAggregateInputType = {
   createdAt?: true
   updatedAt?: true
   organizationId?: true
-  userId?: true
+  ownerId?: true
 }
 
 export type ProjectCountAggregateInputType = {
@@ -95,7 +95,7 @@ export type ProjectCountAggregateInputType = {
   createdAt?: true
   updatedAt?: true
   organizationId?: true
-  userId?: true
+  ownerId?: true
   _all?: true
 }
 
@@ -180,7 +180,7 @@ export type ProjectGroupByOutputType = {
   createdAt: Date
   updatedAt: Date
   organizationId: string
-  userId: string
+  ownerId: string
   _count: ProjectCountAggregateOutputType | null
   _min: ProjectMinAggregateOutputType | null
   _max: ProjectMaxAggregateOutputType | null
@@ -213,7 +213,7 @@ export type ProjectWhereInput = {
   createdAt?: Prisma.DateTimeFilter<"Project"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Project"> | Date | string
   organizationId?: Prisma.StringFilter<"Project"> | string
-  userId?: Prisma.StringFilter<"Project"> | string
+  ownerId?: Prisma.StringFilter<"Project"> | string
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   owner?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }
@@ -227,7 +227,7 @@ export type ProjectOrderByWithRelationInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
+  ownerId?: Prisma.SortOrder
   organization?: Prisma.OrganizationOrderByWithRelationInput
   owner?: Prisma.UserOrderByWithRelationInput
 }
@@ -244,7 +244,7 @@ export type ProjectWhereUniqueInput = Prisma.AtLeast<{
   createdAt?: Prisma.DateTimeFilter<"Project"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Project"> | Date | string
   organizationId?: Prisma.StringFilter<"Project"> | string
-  userId?: Prisma.StringFilter<"Project"> | string
+  ownerId?: Prisma.StringFilter<"Project"> | string
   organization?: Prisma.XOR<Prisma.OrganizationScalarRelationFilter, Prisma.OrganizationWhereInput>
   owner?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }, "id" | "slug">
@@ -258,7 +258,7 @@ export type ProjectOrderByWithAggregationInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
+  ownerId?: Prisma.SortOrder
   _count?: Prisma.ProjectCountOrderByAggregateInput
   _max?: Prisma.ProjectMaxOrderByAggregateInput
   _min?: Prisma.ProjectMinOrderByAggregateInput
@@ -276,7 +276,7 @@ export type ProjectScalarWhereWithAggregatesInput = {
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Project"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Project"> | Date | string
   organizationId?: Prisma.StringWithAggregatesFilter<"Project"> | string
-  userId?: Prisma.StringWithAggregatesFilter<"Project"> | string
+  ownerId?: Prisma.StringWithAggregatesFilter<"Project"> | string
 }
 
 export type ProjectCreateInput = {
@@ -300,7 +300,7 @@ export type ProjectUncheckedCreateInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId: string
-  userId: string
+  ownerId: string
 }
 
 export type ProjectUpdateInput = {
@@ -324,7 +324,7 @@ export type ProjectUncheckedUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ProjectCreateManyInput = {
@@ -336,7 +336,7 @@ export type ProjectCreateManyInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId: string
-  userId: string
+  ownerId: string
 }
 
 export type ProjectUpdateManyMutationInput = {
@@ -358,7 +358,7 @@ export type ProjectUncheckedUpdateManyInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ProjectListRelationFilter = {
@@ -380,7 +380,7 @@ export type ProjectCountOrderByAggregateInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
+  ownerId?: Prisma.SortOrder
 }
 
 export type ProjectMaxOrderByAggregateInput = {
@@ -392,7 +392,7 @@ export type ProjectMaxOrderByAggregateInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
+  ownerId?: Prisma.SortOrder
 }
 
 export type ProjectMinOrderByAggregateInput = {
@@ -404,7 +404,7 @@ export type ProjectMinOrderByAggregateInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
+  ownerId?: Prisma.SortOrder
 }
 
 export type ProjectCreateNestedManyWithoutOwnerInput = {
@@ -551,7 +551,7 @@ export type ProjectScalarWhereInput = {
   createdAt?: Prisma.DateTimeFilter<"Project"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Project"> | Date | string
   organizationId?: Prisma.StringFilter<"Project"> | string
-  userId?: Prisma.StringFilter<"Project"> | string
+  ownerId?: Prisma.StringFilter<"Project"> | string
 }
 
 export type ProjectCreateWithoutOrganizationInput = {
@@ -573,7 +573,7 @@ export type ProjectUncheckedCreateWithoutOrganizationInput = {
   avatarUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  userId: string
+  ownerId: string
 }
 
 export type ProjectCreateOrConnectWithoutOrganizationInput = {
@@ -654,7 +654,7 @@ export type ProjectCreateManyOrganizationInput = {
   avatarUrl?: string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  userId: string
+  ownerId: string
 }
 
 export type ProjectUpdateWithoutOrganizationInput = {
@@ -676,7 +676,7 @@ export type ProjectUncheckedUpdateWithoutOrganizationInput = {
   avatarUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ProjectUncheckedUpdateManyWithoutOrganizationInput = {
@@ -687,7 +687,7 @@ export type ProjectUncheckedUpdateManyWithoutOrganizationInput = {
   avatarUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 
@@ -701,7 +701,7 @@ export type ProjectSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
-  userId?: boolean
+  ownerId?: boolean
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["project"]>
@@ -715,7 +715,7 @@ export type ProjectSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
-  userId?: boolean
+  ownerId?: boolean
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["project"]>
@@ -729,7 +729,7 @@ export type ProjectSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
-  userId?: boolean
+  ownerId?: boolean
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["project"]>
@@ -743,10 +743,10 @@ export type ProjectSelectScalar = {
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
-  userId?: boolean
+  ownerId?: boolean
 }
 
-export type ProjectOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "description" | "slug" | "avatarUrl" | "createdAt" | "updatedAt" | "organizationId" | "userId", ExtArgs["result"]["project"]>
+export type ProjectOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "description" | "slug" | "avatarUrl" | "createdAt" | "updatedAt" | "organizationId" | "ownerId", ExtArgs["result"]["project"]>
 export type ProjectInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   organization?: boolean | Prisma.OrganizationDefaultArgs<ExtArgs>
   owner?: boolean | Prisma.UserDefaultArgs<ExtArgs>
@@ -775,7 +775,7 @@ export type $ProjectPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     createdAt: Date
     updatedAt: Date
     organizationId: string
-    userId: string
+    ownerId: string
   }, ExtArgs["result"]["project"]>
   composites: {}
 }
@@ -1209,7 +1209,7 @@ export interface ProjectFieldRefs {
   readonly createdAt: Prisma.FieldRef<"Project", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Project", 'DateTime'>
   readonly organizationId: Prisma.FieldRef<"Project", 'String'>
-  readonly userId: Prisma.FieldRef<"Project", 'String'>
+  readonly ownerId: Prisma.FieldRef<"Project", 'String'>
 }
     
 

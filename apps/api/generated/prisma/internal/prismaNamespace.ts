@@ -1031,7 +1031,7 @@ export const OrganizationScalarFieldEnum = {
   avatarUrl: 'avatarUrl',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  userId: 'userId'
+  ownerId: 'ownerId'
 } as const
 
 export type OrganizationScalarFieldEnum = (typeof OrganizationScalarFieldEnum)[keyof typeof OrganizationScalarFieldEnum]
@@ -1046,7 +1046,7 @@ export const ProjectScalarFieldEnum = {
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   organizationId: 'organizationId',
-  userId: 'userId'
+  ownerId: 'ownerId'
 } as const
 
 export type ProjectScalarFieldEnum = (typeof ProjectScalarFieldEnum)[keyof typeof ProjectScalarFieldEnum]
