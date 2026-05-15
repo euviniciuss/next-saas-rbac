@@ -1,4 +1,10 @@
 {
   "extends": "@sass/tsconfig/node.json",
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "generated/**/*"],
+  "compilerOptions": {
+    "paths": {
+      "@prisma/client": ["./generated/prisma/client"],
+      "@/*": ["./src/*"]
+    }
+  }
 }

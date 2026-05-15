@@ -6,15 +6,19 @@
   },
   "dependencies": {
     "@fastify/cors": "^11.2.0",
+    "@prisma/adapter-pg": "^7.8.0",
     "@saas/auth": "workspace:*",
     "fastify": "^5.8.5",
     "fastify-type-provider-zod": "^6.1.0",
+    "pg": "^8.20.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@sass/biome-config": "workspace:*",
     "@sass/tsconfig": "workspace:*",
     "@types/node": "^25.7.0",
+    "@types/pg": "^8.20.0",
+    "dotenv": "^17.4.2",
     "prisma": "^7.8.0",
     "tsx": "^4.21.0"
   }
