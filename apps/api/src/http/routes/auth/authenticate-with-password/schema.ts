@@ -8,7 +8,3 @@ export const authenticateSchema = z.object({
 export const reponseSucessSchema = z.object({
   token: z.string(),
 })
-
-export const reponseErrorSchema = z.object({
-  message: z.string(),
-})

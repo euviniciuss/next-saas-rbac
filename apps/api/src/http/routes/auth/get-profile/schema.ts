@@ -13,7 +13,3 @@ export const reponseSucessSchema = z.object({
     avatarUrl: z.url().nullable(),
   }),
 })
-
-export const reponseErrorSchema = z.object({
-  message: z.string(),
-})

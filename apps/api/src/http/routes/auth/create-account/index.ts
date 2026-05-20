@@ -1,3 +1,4 @@
+import { BadRequestError } from "@/http/routes/_errors"
 import { prisma } from "@/lib/prisma"
 import { hash } from "bcryptjs"
 import type { FastifyInstance } from "fastify"
@@ -24,9 +25,7 @@ export async function createAccount(app: FastifyInstance) {
       })
 
       if (userWithEmail) {
-        return reply
-          .status(400)
-          .send({ message: "User with same email already exists." })
+        throw new BadRequestError("User with same e-mail already exists.")
       }
 
       const [, domain] = email.split("@")
