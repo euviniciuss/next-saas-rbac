@@ -12,6 +12,7 @@ import fastifySwaggerUI from "@fastify/swagger-ui"
 import { fastify } from "fastify"
 import { errorHandler } from "./error-handler"
 import {
+  authenticateWithGithub,
   authenticateWithPassword,
   createAccount,
   getProfile,
@@ -50,6 +51,7 @@ app.register(fastifyCors)
 
 app.register(createAccount)
 app.register(authenticateWithPassword)
+app.register(authenticateWithGithub)
 app.register(getProfile)
 app.register(requestPasswordRecovery)
 app.register(resetPassword)

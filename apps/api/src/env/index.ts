@@ -6,6 +6,9 @@ const envSchema = z.object({
   NODE_ENV: z.enum(["dev", "test", "production"]).default("dev"),
   PORT: z.coerce.number().default(3333),
   DATABASE_URL: z.string(),
+  GITHUB_OAUTH_CLIENT_ID: z.string(),
+  GITHUB_OAUTH_CLIENT_SECRET: z.string(),
+  GITHUB_OAUTH_CLIENT_REDIRECT_URI: z.string(),
 })
 
 const result = envSchema.safeParse(process.env)
