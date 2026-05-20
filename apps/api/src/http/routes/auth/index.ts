@@ -1,3 +1,5 @@
 export * from "./create-account"
 export * from "./authenticate-with-password"
 export * from "./get-profile"
+export * from "./request-password-recovery"
+export * from "./reset-password"

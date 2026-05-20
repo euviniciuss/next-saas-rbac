@@ -1,4 +1,4 @@
-import { email, z } from "zod"
+import { z } from "zod"
 
 export const authenticateSchema = z.object({
   email: z.email(),
