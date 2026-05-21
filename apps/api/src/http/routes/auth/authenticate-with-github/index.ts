@@ -3,8 +3,8 @@ import { prisma } from "@/lib/prisma"
 import type { FastifyInstance } from "fastify"
 import type { ZodTypeProvider } from "fastify-type-provider-zod"
 
-import { env } from "@/env"
 import { BadRequestError } from "@/http/routes/_errors"
+import { env } from "@saas/env"
 import { z } from "zod"
 import {
   accessTokenDataSchema,
