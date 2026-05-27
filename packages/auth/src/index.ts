@@ -11,6 +11,7 @@ import type { AppAbility } from "./types"
 export * from "./models/projects"
 export * from "./models/organization"
 export * from "./models/user"
+export * from "./roles"
 
 export const createAppAbility = createMongoAbility as CreateAbility<AppAbility>
 
