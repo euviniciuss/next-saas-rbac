@@ -20,7 +20,11 @@ import {
   requestPasswordRecovery,
   resetPassword,
 } from "./routes/auth"
-import { createOrganization, getMembership } from "./routes/orgs"
+import {
+  createOrganization,
+  getMembership,
+  getOrganization,
+} from "./routes/orgs"
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -70,6 +74,7 @@ app.register(resetPassword)
 // Organization routes
 app.register(createOrganization)
 app.register(getMembership)
+app.register(getOrganization)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log("HTTP server running 🚀")
