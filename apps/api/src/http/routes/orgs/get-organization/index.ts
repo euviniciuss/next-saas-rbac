@@ -1,9 +1,8 @@
 import { auth } from "@/http/middlewares/auth"
-import { prisma } from "@/lib/prisma"
-import { createSlug } from "@/utils"
+
 import type { FastifyInstance } from "fastify"
 import type { ZodTypeProvider } from "fastify-type-provider-zod"
-import { BadRequestError } from "../../_errors"
+
 import { getOrganizationParams, reponseSucessSchema } from "./schema"
 
 export async function getOrganization(app: FastifyInstance) {
