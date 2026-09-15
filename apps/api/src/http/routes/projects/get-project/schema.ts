@@ -1,10 +1,5 @@
 import { z } from "zod"
 
-export const projectSchema = z.object({
-  name: z.string(),
-  description: z.string(),
-})
-
 export const projectParams = z.object({
   orgSlug: z.string(),
   projectSlug: z.string(),
