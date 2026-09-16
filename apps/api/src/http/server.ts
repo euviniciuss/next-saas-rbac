@@ -31,7 +31,7 @@ import {
   updateOrganization,
 } from "./routes/orgs"
 
-import { getMembers } from "./routes/members"
+import { getMembers, updateMember } from "./routes/members"
 
 import {
   createProject,
@@ -104,6 +104,7 @@ app.register(updateProject)
 
 // Members routes
 app.register(getMembers)
+app.register(updateMember)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log("HTTP server running 🚀")
