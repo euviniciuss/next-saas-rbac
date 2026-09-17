@@ -33,7 +33,7 @@ import {
 
 import { getMembers, removeMember, updateMember } from "./routes/members"
 
-import { createInvite } from "./routes/invites"
+import { createInvite, getInvite } from "./routes/invites"
 import {
   createProject,
   deleteProject,
@@ -110,6 +110,7 @@ app.register(removeMember)
 
 // Invites routes
 app.register(createInvite)
+app.register(getInvite)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log("HTTP server running 🚀")
