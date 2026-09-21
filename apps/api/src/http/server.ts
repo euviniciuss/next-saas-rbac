@@ -39,6 +39,7 @@ import {
   getInvite,
   getInvites,
   rejectInvite,
+  revokeInvite,
 } from "./routes/invites"
 import {
   createProject,
@@ -120,6 +121,7 @@ app.register(getInvite)
 app.register(getInvites)
 app.register(acceptInvite)
 app.register(rejectInvite)
+app.register(revokeInvite)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log("HTTP server running 🚀")
