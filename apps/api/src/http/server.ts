@@ -43,6 +43,7 @@ import {
   revokeInvite,
 } from "./routes/invites"
 
+import { getOrganizationBilling } from "./routes/billing"
 import {
   createProject,
   deleteProject,
@@ -125,6 +126,9 @@ app.register(acceptInvite)
 app.register(rejectInvite)
 app.register(revokeInvite)
 app.register(getPendingInvites)
+
+// Billing routes
+app.register(getOrganizationBilling)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log("HTTP server running 🚀")
